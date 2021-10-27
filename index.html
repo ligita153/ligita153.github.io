@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" />
+        <title>L.Polovko</title>
+        <link rel="stylesheet" type="text/css" href="./stylesheet/portfolio.css">
+    </head>
+
+    <body class="Background">
+        <div class="Navbar">
+            <a class="active" href="#Home">Home</a>
+            <a href="#Slideshow">Slideshow</a>
+            <a href="#About">About</a>
+            <a href="#GitHub">GitHub</a>
+            <a onclick="openForm()" ondblclick="closeForm()">Contact</a>
+        </div>
+       
+
+        <div id="Home">
+            <video autoplay muted loop id="Binary_Video">
+                <source src="./images/video/binary.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+        <div class="Video_Text">
+            <h1 class="white-text">L.Polovko Portfolio</h1>
+            <strong>
+                <p class="center">
+                    <q> In some ways, programming is like painting. You start with a blank canvas and certain basic raw materials.
+                        <br>You use a combination of science, art, and craft to determine what to do with them.
+                    </q>
+                    <br> -Andrew Hunt
+                    <br>
+                    <br> My name is Ligita. Welcome to my portfolio website. On it, I will tell you about my background and experience.
+                    <br>
+                    <br> Thank you for stopping by and enjoy! 
+                </p>
+            </strong>
+        </div>
+
+        
+        <div id="Slideshow">
+            <div id="Slideshow_Background"> 
+                <div id="Slideshow_Container">
+                    
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/Square Personal Photo.png" alt="Picture of myself">
+                        <div class="text">I'm available to assist you on your project!</div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/HTML_CSS_and_JavaScript.jpeg" alt="HTML, CSS, and JS logos"> 
+                        <div class="text">I am trained in:<br>HTML, CSS, JavaScript,</div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/PS ID AI.png" alt="PS ID AI logos">
+                        <div class="text">Adobe Photoshop, Adobe Illustrator, Adobe InDesign.</div>
+                    </div>
+                   
+                  
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/Square Custom Picture.jpg" alt="Computer picture"> 
+                        <div class="text"><a class="white-text" onclick="openForm()" href="#Contact">Contact me now!</a></div> 
+                    </div>
+                  
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br> 
+
+                
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                    <span class="dot" onclick="currentSlide(4)"></span> 
+                </div>
+            </div>
+        </div>
+
+
+        <div class="Row" id="About">
+            <div class="Column_2">
+                <img src="./images/about.jpg" alt="About section image">
+            </div>
+            <div class="Column_1">
+                <h1>About</h1>
+                <p>
+                    I am a software and web developer student who learns to code! Also I love grafic design and interior design. I enjoy time with my family and friends. 
+                    <br>
+                    <br>I am a graduate of <a href="https://www.pitman-training.com" target="_blank">Pitman Training</a>’s Web and Graphic Design Diploma Course.  
+                    <br>
+                    <br>I am currently studying for Advanced Software and Web Developer Diploma Course. I would love to improve my skills and work with you on your project.<a href="#Contact">Contact</a> me below!
+                </p>
+            </div>
+        </div>
+
+        <div class="Row" id="GitHub">
+            <div class="Column_1">
+                <h1>GitHub</h1>
+                <p>
+                    You can view my coding projects on my GitHub profile here:
+                    <br>
+                    <p class="center"><a href="https://github.com/ligita153" target="_blank">ligita153 Github</a></p>
+                </p>
+            </div>
+            <div class="Column_2">
+                <a href="https://github.com/ligita153" target="_blank"><img src="images/GitHub.png" alt="GitHub Logo"></a>
+            </div>
+        </div>
+
+
+        <div id="Contact">
+           <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+           <div class="form-popup" id="myForm">
+                <form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container"> <!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
+                    <h1>Contact</h1>
+                    <label for="name"><b>Name</b></label>
+                      <input type="text" placeholder="Type your name here" name="name" required>
+                    <label for="phone"><b>Phone</b></label>
+                      <input type="text" placeholder="Type your phone number here" name="phone">
+                    <label for="email"><b>Email</b></label>		
+                      <input type="text" placeholder="Type your email address here" name="email" required>
+                    <label for="message"><b>Message</b></label>
+                      <input type="text" placeholder="Type your message here" name="message">
+         
+                    <button type="submit" class="btn">SUBMIT</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+                </form>
+           </div>
+        </div>
+
+        <footer>
+            <p>
+                <p class="center">&copy Prosper Consulting Inc., <a href="https://www.learncodinganywhere.com/" target="_blank">The Tech Academy</a></p>
+                <br>
+            </p>
+        </footer>
+        <script src="js/portfolio.js"></script>
+    </body>
+</html>
